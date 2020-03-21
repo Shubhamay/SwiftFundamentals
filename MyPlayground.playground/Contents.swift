@@ -169,3 +169,22 @@ var first = Movie(title: "1", director: "2", releaseYear: "3")
 //print(first.director)
 //print(first.summary())
 
+//Dictionary
+var airlines = [
+    "One": 1,
+    "Two": 2,
+    "Three": 3,
+    "Four": 4,
+]
+
+var initalairlines: [Int: Int] = [1: 2]
+
+print(airlines)
+airlines["One"] = nil
+print(airlines)
+print(initalairlines[1])
+
+for (key, value) in airlines {
+    print(key)
+}
+
