@@ -86,3 +86,16 @@ for a in stride(from: 0, to: forLoop, by: 3) {
 for a in stride(from: 10, through: 0, by: -1) {
     print(a)
 }
+
+print("Shubhamay \(forLoopA)")
+
+print("\(1 + 2 + 3 + 4)")
+
+
+//Functions
+func callFunc(a: Int,stringParameter: String) -> (Int, String) {
+    print("Func is called \(a) \(stringParameter)")
+    return (1, "Shubhamay")
+}
+
+print(callFunc(a: 10,stringParameter: "Shubhamay"))
