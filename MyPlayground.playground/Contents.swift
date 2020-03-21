@@ -50,5 +50,24 @@ default:
     print("Default")
 }
 
+//Range
+var intA = 100;
+switch intA {
+case 1:
+    print("Hi")
+case 2:
+    print("Hello")
+case 3...100:
+    print("range")
+default:
+    print("Default")
+}
+
+//For Loop of Int
+var forLoop = 10;
+var forLoopA = 0;
+for forLoopA in 0...forLoop {
+    print(forLoopA)
+}
 
 
