@@ -179,12 +179,23 @@ var airlines = [
 
 var initalairlines: [Int: Int] = [1: 2]
 
-print(airlines)
+//print(airlines)
 airlines["One"] = nil
-print(airlines)
-print(initalairlines[1])
+//print(airlines)
+//print(initalairlines[1])
 
 for (key, value) in airlines {
-    print(key)
+//    print(key)
 }
 
+//Tuple
+func returnTuple() -> (first: Int,second:   String) {
+    return (1,"One")
+}
+
+returnTuple().first
+returnTuple().second
+
+var (firstTuple, secondTuple) = returnTuple()
+print(firstTuple)
+print(secondTuple)
