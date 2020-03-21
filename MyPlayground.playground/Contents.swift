@@ -151,3 +151,21 @@ var associatedItemType: AssociatedEnum = .one(2, "Two")
 //default:
 //    print("Default")
 //}
+
+struct Movie {
+    var title: String
+    var director: String
+    var releaseYear: String
+    
+    func summary() -> Int {
+        print("Inside Summary")
+        return 1;
+    }
+}
+
+var first = Movie(title: "1", director: "2", releaseYear: "3")
+
+
+//print(first.director)
+//print(first.summary())
+
