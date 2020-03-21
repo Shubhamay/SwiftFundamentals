@@ -70,4 +70,19 @@ for forLoopA in 0...forLoop {
     print(forLoopA)
 }
 
+for forLoopA in 0..<forLoop {
+    print(forLoopA)
+}
 
+for temp in arrayB {
+    print(temp)
+}
+
+//Stride
+for a in stride(from: 0, to: forLoop, by: 3) {
+    print(a)
+}
+
+for a in stride(from: 10, through: 0, by: -1) {
+    print(a)
+}
