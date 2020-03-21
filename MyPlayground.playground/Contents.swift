@@ -1,3 +1,5 @@
+//DAY 1
+
 let a = 4.0
 //print(type(of: a))
 let b = 1 + 1;
@@ -197,5 +199,53 @@ returnTuple().first
 returnTuple().second
 
 var (firstTuple, secondTuple) = returnTuple()
-print(firstTuple)
-print(secondTuple)
+//print(firstTuple)
+//print(secondTuple)
+
+//Closures
+struct Book {
+    var name: String
+    var numberOfPages: Int
+    var readersAge: Int
+}
+
+let book1 = Book.init(name: "C", numberOfPages: 40, readersAge: 1)
+let book2 = Book.init(name: "D", numberOfPages: 20, readersAge: 10)
+let book3 = Book.init(name: "E", numberOfPages: 30, readersAge: 9)
+
+var allBooks = [book1, book2, book3];
+
+let sortedBook = allBooks.sorted(by: {
+    (firstBook: Book, secondBook: Book) -> Bool
+    
+    in
+    
+    if firstBook.numberOfPages > secondBook.numberOfPages {
+        return true
+    }
+    
+    return false
+})
+
+print(sortedBook)
+
+let sortedBook1 = allBooks.sorted(by: {
+    if $0.numberOfPages > $1.numberOfPages {
+        return true
+    }
+    
+    return false
+})
+print(sortedBook1)
+
+//Trailing Closure
+let sortedBook2 = allBooks.sorted { $0.numberOfPages > $1.numberOfPages }
+let sortedBook3 = allBooks.sorted { $0.readersAge > $1.readersAge }
+print(sortedBook2)
+print(sortedBook3)
+
+//Filtering with Closure
+let bookWithReadersAgeGreaterThan5 = allBooks.filter {
+    $0.readersAge > 5
+}
+print(bookWithReadersAgeGreaterThan5)
