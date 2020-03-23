@@ -249,3 +249,123 @@ let bookWithReadersAgeGreaterThan5 = allBooks.filter {
     $0.readersAge > 5
 }
 print(bookWithReadersAgeGreaterThan5)
+
+//Class
+class testClass {
+    var name: String
+    
+    init() {
+        name = "Shubham"
+    }
+    
+    deinit {
+        name = ""
+    }
+    
+    var score: Int {
+        get {
+            return 10;
+        }
+        set {
+            print(newValue)
+        }
+    }
+    func printName() {
+//        print(name)
+    }
+}
+
+var aClass = testClass()
+aClass.printName()
+aClass.score = 15
+aClass.score
+
+extension Movie {
+    func add() {
+        print("Shubham")
+    }
+}
+
+var movie = Movie(title: "", director: "", releaseYear: "")
+movie.add()
+
+extension String {
+    func removeLastCharecter(name: String) {
+        print(name)
+    }
+}
+
+var name:String = "a"
+name.removeLastCharecter(name: "shubham")
+
+protocol Aprotoocol {
+    var name: String {
+        get
+    }
+    func test(aa: Int)
+    func testBB(bb: Int)
+}
+
+protocol Bprotoocol {
+    var name1: String {
+        get
+    }
+    func test(aa: Int)
+    func testBB(bb: Int)
+}
+
+class BBTestProtocol : Aprotoocol, Bprotoocol {
+    var name1: String = "Shubhamay Das"
+    var name: String = "Shubhamay"
+    
+    func test(aa: Int) {
+        print(aa)
+    }
+    
+    func testBB(bb: Int) {
+        print(bb)
+    }
+}
+
+//Error Handling
+
+enum ErrorHandling: Error {
+    case notFound
+    case serverConnection
+}
+
+func itThrowsError() throws -> String {
+    let result: String? = "ABCD"
+    
+    guard result != nil else {
+        print("Condition not met")
+        return ""
+    }
+    return result!;
+    
+    throw ErrorHandling.serverConnection
+}
+
+do {
+    try itThrowsError()
+}catch ErrorHandling.notFound {
+    print("Not Found")
+}
+catch ErrorHandling.serverConnection {
+    print("Server Connection")
+}
+catch {
+    print(error)
+}
+defer {
+    print("DEFER")
+}
+
+if let result = try? itThrowsError() {
+    print(result)
+}
+
+
+
+
+
